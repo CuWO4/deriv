@@ -15,7 +15,9 @@
 > derive [VARIABLE] (= [VALUE]) | [FORMULA]
 
 `[VARIABLE]` 指定自变量.
+
 `= [VALUE]` 可选. 将额外输出表达式在 `[VARIABLE]` = `[VALUE]` 处的值.
+
 `[FORMULA]` 指定待求导表达式, 中缀表达式.
 
 会输出 $\frac{\partial [FORMULA]}{\partial [VARIABLE]}$ . 
@@ -31,7 +33,7 @@ ln, sin, cos, tan, arcsin, arccos, arctan.
 ## SAMEPLE
 
 下面的例子展示了对 $x ^ {sin(x)}$ 求导的结果.
-> deriv x | ^ x sin x
+> deriv x | ^ x sin x <br>
 > x ^ sin(x) * ( cos(x) * ln(x) + sin(x)/x )
 
 ## TODO
