@@ -37,10 +37,13 @@ $(DEBUGDIR) :
 # files dependecies #
 -include $(DEPS)
 
+VARIABLE 	:= x
+FORMULA 	:= ^ x sin plus 2 x
+
 # run command #
 .PHONY : run
 run:
-	./$(DEBUGDIR)/$(TARGET)
+	./$(DEBUGDIR)/$(TARGET) $(VARIABLE) $(FORMULA)
 
 # clean command #
 .PHONY : clean

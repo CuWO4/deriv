@@ -8,15 +8,13 @@
 
 ## BUILD
 
-> make
+> `make`
 
 ## USAGE
 
-> derive [VARIABLE] (= [VALUE]) | [FORMULA]
+> `derive [VARIABLE] [FORMULA]`
 
 `[VARIABLE]` 指定自变量.
-
-`= [VALUE]` 可选. 将额外输出表达式在 `[VARIABLE]` = `[VALUE]` 处的值.
 
 `[FORMULA]` 指定待求导表达式, 中缀表达式.
 
@@ -25,17 +23,22 @@
 可用运算符有:
 
 ##### 单目
+
 ln, sin, cos, tan, arcsin, arccos, arctan.
 
 ##### 双目
-+, -, *, /, ^, log.
+
++, -, mul, /, ^.
+
+(不适用*是因为它会被当作通配符)
 
 ## SAMEPLE
 
-下面的例子展示了对 $x ^ {sin(x)}$ 求导的结果.
-> deriv x | ^ x sin x <br>
-> x ^ sin(x) * ( cos(x) * ln(x) + sin(x)/x )
+下面的例子展示了对 $x ^ {sin(2x)}$ 求导的结果.
+
+> `deriv x ^ x sin mul 2 x` <br>
+> `x ^ sin(x) * ( 2 * cos(2 * x) * ln(x) + sin(2 * x) / x )`
 
 ## TODO
 
-支持自变量列表, 即对多个自变量分别求偏导.
+支持求值操作.
