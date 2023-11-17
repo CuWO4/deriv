@@ -37,7 +37,9 @@ ln, sin, cos, tan, arcsin, arccos, arctan.
 下面的例子展示了对 $x ^ {sin(2x)}$ 求导的结果.
 
 > `deriv x ^ x sin mul 2 x` <br>
-> `x ^ sin(x) * ( 2 * cos(2 * x) * ln(x) + sin(2 * x) / x )`
+> `x ^ sin( 2 * x ) * ( sin( 2 * x ) / x +  ln( x ) * cos( 2 * x ) * 2 )`
+
+使用 `make run` 命令查看几个结果.
 
 ## TODO
 

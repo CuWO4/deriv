@@ -38,12 +38,18 @@ $(DEBUGDIR) :
 -include $(DEPS)
 
 VARIABLE 	:= x
-FORMULA 	:= ^ x sin plus 2 x
+FORMULA1 	:= mul x ^ e x
+FORMULA2	:= - ln sin x ^ x 3
+FORMULA3	:= ^ x sin mul 2 x
+FORMULA4 	:= + ^ x sin mul 2 x ^ x / 1 x
 
 # run command #
 .PHONY : run
 run:
-	./$(DEBUGDIR)/$(TARGET) $(VARIABLE) $(FORMULA)
+	./$(DEBUGDIR)/$(TARGET) $(VARIABLE) $(FORMULA1)
+	./$(DEBUGDIR)/$(TARGET) $(VARIABLE) $(FORMULA2)
+	./$(DEBUGDIR)/$(TARGET) $(VARIABLE) $(FORMULA3)
+	./$(DEBUGDIR)/$(TARGET) $(VARIABLE) $(FORMULA4)
 
 # clean command #
 .PHONY : clean
